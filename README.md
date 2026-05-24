@@ -14,12 +14,19 @@ Instead of scrolling through dozens of posts one by one, type one command and ge
 
 ## Quick Start
 
-### 1. Install
+### Option A: Install from GitHub (recommended)
+
+```bash
+pip install git+https://github.com/yongsinfok/xhs-research.git
+playwright install firefox
+```
+
+### Option B: Clone and install
 
 ```bash
 git clone https://github.com/yongsinfok/xhs-research.git
 cd xhs-research
-pip install -r requirements.txt
+pip install -e .
 playwright install firefox
 ```
 
@@ -42,7 +49,7 @@ ai:
 ### 3. Run
 
 ```bash
-PYTHONPATH=. PYTHONIOENCODING=utf-8 python -m src.cli search "马来西亚高性价比扫地机器人"
+xhs-research search "马来西亚高性价比扫地机器人"
 ```
 
 A browser window opens. Scan the QR code with the Xiaohongshu app to log in (only needed the first time). The tool then scrapes posts and generates a report.
@@ -51,22 +58,22 @@ A browser window opens. Scan the QR code with the Xiaohongshu app to log in (onl
 
 ```bash
 # Basic search (default 20 posts)
-python -m src.cli search "吉隆坡美食推荐"
+xhs-research search "吉隆坡美食推荐"
 
 # More posts for better coverage
-python -m src.cli search "新加坡PR申请攻略" --limit 30
+xhs-research search "新加坡PR申请攻略" --limit 30
 
 # Use a specific model
-python -m src.cli search " MacBook Pro M4 值得买吗" --model deepseek-chat
+xhs-research search "MacBook Pro M4 值得买吗" --model deepseek-chat
 
 # Save to a specific path
-python -m src.cli search "装修避坑指南" --output ./my-report.md
+xhs-research search "装修避坑指南" --output ./my-report.md
 
 # Also export raw data as JSON
-python -m src.cli search "搬家攻略" --json
+xhs-research search "搬家攻略" --json
 
 # View config file location
-python -m src.cli config-path
+xhs-research config-path
 ```
 
 ## Report Example
@@ -112,7 +119,7 @@ Any endpoint that exposes an OpenAI-compatible `/v1/chat/completions` API works 
 
 ```
 xhs-research/
-├── src/
+├── xhs_research/
 │   ├── cli.py              # CLI entry point (typer)
 │   ├── config.py           # YAML config loader
 │   ├── models/post.py      # Post / Comment data models

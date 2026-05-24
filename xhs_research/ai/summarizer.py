@@ -1,8 +1,8 @@
 import json
 from datetime import date
 
-from src.ai.client import AIClient
-from src.models.post import Post
+from xhs_research.ai.client import AIClient
+from xhs_research.models.post import Post
 
 
 SYSTEM_PROMPT = """你是一个专业的消费决策调研助手。用户会给你多从小红书搜索到的帖子数据，你需要分析这些帖子，生成一份实用的调研报告。

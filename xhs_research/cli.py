@@ -7,10 +7,10 @@ import typer
 from playwright.sync_api import sync_playwright
 from rich.console import Console
 
-from src.config import AppSettings, ensure_dirs
-from src.scraper.parser import XiaohongshuScraper
-from src.ai.client import AIClient
-from src.ai.summarizer import Summarizer
+from xhs_research.config import AppSettings, ensure_dirs
+from xhs_research.scraper.parser import XiaohongshuScraper
+from xhs_research.ai.client import AIClient
+from xhs_research.ai.summarizer import Summarizer
 
 app = typer.Typer(help="小红书 AI 调研工具 — 搜索帖子并生成 AI 汇总报告")
 console = Console()

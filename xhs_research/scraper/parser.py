@@ -4,7 +4,7 @@ import time
 from playwright.sync_api import Page
 from rich.console import Console
 
-from src.models.post import Post, Comment
+from xhs_research.models.post import Post, Comment
 
 console = Console()
 

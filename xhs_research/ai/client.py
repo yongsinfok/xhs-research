@@ -1,5 +1,5 @@
 from openai import OpenAI
-from src.config import AISettings
+from xhs_research.config import AISettings
 
 
 class AIClient:
