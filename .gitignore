@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+config.yaml
+*.json
+!pyproject.toml
+reports/
+.xhs-research/
+*.egg-info/
+dist/
+build/
+.env

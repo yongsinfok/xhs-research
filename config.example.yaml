@@ -1,0 +1,15 @@
+# 复制此文件为 ~/.xhs-research/config.yaml 并填写你的配置
+
+ai:
+  provider: openai       # openai / claude / deepseek / custom
+  api_key: sk-xxx        # 本地模型不需要
+  base_url: null         # 本地模型填 http://localhost:8080/v1
+  model: gpt-4o
+
+scraper:
+  default_limit: 20
+  max_limit: 50
+  comments_per_post: 20
+
+output:
+  format: markdown
