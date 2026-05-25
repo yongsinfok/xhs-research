@@ -14,14 +14,21 @@ Instead of scrolling through dozens of posts one by one, type one command and ge
 
 ## Quick Start
 
-### Option A: Install from GitHub (recommended)
+### Option A: Install from PyPI (recommended)
+
+```bash
+pip install xhs-research
+playwright install firefox
+```
+
+### Option B: Install from GitHub
 
 ```bash
 pip install git+https://github.com/yongsinfok/xhs-research.git
 playwright install firefox
 ```
 
-### Option B: Clone and install
+### Option C: Clone for development
 
 ```bash
 git clone https://github.com/yongsinfok/xhs-research.git
